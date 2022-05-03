@@ -11,8 +11,6 @@ const PRESCENCE = "&presence=1"
 //https://www.piesocket.com/websocket-tester
 
 // MY_ID is made global in sockets-all
-//import { rand_between } from "./socket-all";
-//export const MY_ID = rand_between(100, 1000);
 
 const socketLoc = `wss://${CLUSTER_ID}.piesocket.com/v3/${PIE_CHANNEL}?api_key=${PIE_API_KEY}${NOTIFY_SELF}${PRESCENCE}&user=${MY_ID}`
 
