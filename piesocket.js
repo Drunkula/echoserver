@@ -10,7 +10,7 @@ const PRESCENCE = "&presence=1"
 // credentials change now and again - get them from :
 //https://www.piesocket.com/websocket-tester
 
-// MY_ID is made global in sockets-all
+// MY_ID is made global in sockets-all CHANGE FOR GITHUB
 
 const socketLoc = `wss://${CLUSTER_ID}.piesocket.com/v3/${PIE_CHANNEL}?api_key=${PIE_API_KEY}${NOTIFY_SELF}${PRESCENCE}&user=${MY_ID}`
 
