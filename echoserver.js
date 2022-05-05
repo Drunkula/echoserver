@@ -6,7 +6,8 @@
 'use strict'
 console.log('\x1Bc');
 	// ports on glitch/codesandbox doesn't seem to matter -too- much as they pipe through 80 or 443
-const WS_PORT = 3000;
+	// heroku wants to use process.env.PORT I think
+const WS_PORT = process.env.PORT || 3000;
 const PING_INTERVAL = 30000;  // 30 seconds works fine, some libraries use 20
 
 var sendRandCount = 6;	// number of messages to send on connection
