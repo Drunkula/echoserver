@@ -50,18 +50,6 @@ wss.on('connection', function (ws, inMsg) {	// inMsg is actually http get reques
 		broadcast(wss, `<b><r>CLOSE</r></b> for socket [${this.id}] code: ${code} : reason: ${reason}`)
 	});
 
-	// inMsg.complete: bool, aborted:bool, upgraded:bool, url, method, statusCode, inMsg.headers {} and lots more
-	//console.log('We got a connection inMsg : ', inMsg);	// too much gravy
-	//console.dir(inMsg);	// too much gravy
-
-	//	console.log("HEADERS:", inMsg.headers);
-
-	// console.log('We got a connection inMsg.url : ', inMsg.url);	// /?myid=555 this is the cheese!
-	//console.log('params:', parse(inMsg.url));
-	//console.log('params:', parse(inMsg.url, true).query);	// that's the tikky.. but it's deprecated
-	//const u = new URL("http://foo.com"+inMsg.url);
-	//const u = new URL(inMsg.url, "http://fake.com/");	// url.parse is deprecated, though it works - so let's do it the official way
-
 	ws.ping("--connection-ping--"+id+':'+ping_string());
 
 	ws.send(`<h4>Welcome, traveller [${id}], from ws socket thing</h4>`);
